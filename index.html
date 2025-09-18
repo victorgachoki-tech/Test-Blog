@@ -30,8 +30,30 @@
     <p>
       Maybe you can't tell, but I can't really build websites. So starting with something
       like a personal website was a good step to learn some shit. Cool cool cool, 
-      toit toit toit toit, happy stalking!
+      toit toit toit toit, happy stalking! But for now, this is something really cool I've always
+      wanted to try.
     </p>
+
+    <p id="dynamicTextTest">I stole this from my brother's website</p>
+    <script>
+      const statements = [
+        "Almost everything in this is stolen from my brother",
+        "I don't give two shits",
+        "It looks cool!"
+      ];
+      let index = 0;
+      const paragraph = document.getElementById("dynamicTextTest");
+      setInterval(() => {
+        // Fade Out
+        paragraph.classList.add("hidden");
+        setTimeout(() => {
+          // Update text and fade in
+          index = (index + 1) % statements.length;
+          paragraph.textContent = statements[index];
+          paragraph.classList.remove("hidden")
+        }, 500);
+      }, 3000);
+    </script>
   </div>
 </body>
 </html>
