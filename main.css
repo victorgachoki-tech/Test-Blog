@@ -1,6 +1,7 @@
 .main {
     background-color: #f8f0e3;
     font-family: 'Google Sans Code', monospace;
+    cursor: url('Images/Cursor.png'), auto;
 }
 
 .main a {
@@ -10,6 +11,7 @@
 
 .main a:hover {
     color: darkgoldenrod;
+    cursor: url(Images/Pointer.png), auto;
 }
 
 .main_header {
@@ -44,6 +46,14 @@
     display: block;
     text-align: center;
     padding: 14px 16px;
+    /* only for navigation pane */
+    transition: border 0.1s;
+}
+
+.nav ul li a:hover {
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 0 25px;
 }
 
 .main_text {
